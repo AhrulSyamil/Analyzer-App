@@ -5,7 +5,7 @@
          <div class="container">
             <div class="navbar-content">
                <a href="#" class="navbar-brand">
-                  Analyzer<span>APP</span>
+                  Whatsapp<span> Analyzer</span>
                </a>
                <ul class="navbar-nav">
                   
@@ -18,7 +18,7 @@
       </nav>
 
       <!-- Menu Bar -->
-      <MenuBar />            
+      <!-- <MenuBar /> -->
 
       
    </div>

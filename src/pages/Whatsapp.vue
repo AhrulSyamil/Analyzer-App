@@ -237,6 +237,9 @@ export default defineComponent({
     }
 
     function input() {
+      data.file = null
+      data.datasource = null
+
       data.file = this.$refs["dataset"].files[0]
 
       Loading.show({
@@ -260,13 +263,12 @@ export default defineComponent({
     }
 
     onMounted(() => {
-      $('#dataset').dropify()
+      let input = $('#dataset').dropify()
 
-      // let mrfInput = $(this.$refs.['mrf-input']).dropify()
-      // mrfInput.on('dropify.afterClear', (event, element) => {
-      //     this.form.mrf = null
-      //     this.pdf_viewer_show = false
-      // });
+      input.on('dropify.afterClear', (event, element) => {
+          data.file = null
+          data.datasource = null
+      });
     })
 
     onUpdated(() => {
